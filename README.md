@@ -27,7 +27,7 @@ or just include the compiled file to your page:
 
 ## Usage
 
-> ⚠️ PS：LottiePalette is not include Lottie, please import Lottie additionally。
+> ⚠️ PS：LottiePalette is not include Lottie, please import Lottie additionally.
 
 ```js
 import Lottie from 'lottie-web/build/player/lottie_svg'
