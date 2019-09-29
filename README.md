@@ -2,7 +2,7 @@
 
 English | [中文](./README.CN.md)
 
-[![npm](https://img.shields.io/npm/v/lottie-palette)](https://www.npmjs.com/package/dropping-canvas)
+[![npm](https://img.shields.io/npm/v/lottie-palette)](https://www.npmjs.com/package/lottie-palette)
 ![GitHub file size in bytes](https://img.shields.io/github/size/Gwokhov/lottie-palette/dist/lottie-palette.js)
 
 ## Intro
