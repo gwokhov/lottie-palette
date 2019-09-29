@@ -31,7 +31,7 @@ or just include the compiled file to your page:
 
 ```js
 import Lottie from 'lottie-web/build/player/lottie_svg'
-import LottiePalette from './lottie-palette'
+import LottiePalette from 'lottie-palette'
 
 let lp = null
 
