@@ -1,3 +1,5 @@
+import { rgb2Rgba, hex2Rgb, isRgb, isHex } from './utils/color'
+
 export default class LottiePalette {
   constructor($element) {
     if (!$element) {
@@ -92,7 +94,7 @@ export default class LottiePalette {
     stopArray.forEach(stop => {
       let color = ''
       if (stop[2]) {
-        color = LottiePalette._rgb2Rgba(stop[1], stop[2])
+        color = rgb2Rgba(stop[1], stop[2])
       } else {
         color = stop[1]
       }
@@ -100,26 +102,6 @@ export default class LottiePalette {
       stops.push(color)
     })
     return `${pre}${stops.join(',')}${suf}`
-  }
-
-  static _rgb2Rgba(rgb, opacity) {
-    const num = rgb.substring(4, rgb.length - 1)
-    return `rgba(${num},${opacity})`
-  }
-
-  static _hex2Rgb(hex) {
-    var shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i
-    hex = hex.replace(shorthandRegex, function(m, r, g, b) {
-      return r + r + g + g + b + b
-    })
-
-    var result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex)
-    return result
-      ? `rgb(${parseInt(result[1], 16)},${parseInt(result[2], 16)},${parseInt(
-          result[3],
-          16
-        )})`
-      : ''
   }
 
   getInitialColors() {
@@ -159,16 +141,16 @@ export default class LottiePalette {
    */
   updateColor(key, value, isUpdateGrad) {
     let fKey = key.replace(/\s+/g, '')
-    if (fKey.indexOf('#') === 0 && (fKey.length === 4 || fKey.length === 7)) {
-      fKey = LottiePalette._hex2Rgb(fKey)
-    } else if (fKey.indexOf('rgb(') === 0) {
+    if (isHex(fKey)) {
+      fKey = hex2Rgb(fKey)
+    } else if (isRgb(fKey)) {
     } else {
       throw `[lottie-palette] Color key ${key} is invalid`
     }
 
     const encodeKey = window.encodeURIComponent(key.replace(/\s+/g, ''))
     if (!(encodeKey in this.colorMap)) {
-      throw `No such color key "${key}" in the origin svg file!`
+      throw `[lottie-palette] No such color key "${key}" in the origin svg file!`
     }
 
     this.colorMap[encodeKey].forEach($path => {
