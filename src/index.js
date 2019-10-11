@@ -72,7 +72,7 @@ export default class LottiePalette {
 
   /**
    * 将序列化后的渐变数据转为数组对象
-   * @param {*} str 序列化数据
+   * @param {String} str 序列化数据
    */
   static _lineGradString2Data(str) {
     const stopData = str.split('-')
@@ -83,7 +83,7 @@ export default class LottiePalette {
 
   /**
    * 将序列化的渐变数据转化为CSS渐变字符串
-   * @param {*} str 序列化数据
+   * @param {String} str 序列化数据
    */
   static _lineGradString2CSS(str) {
     const stopArray = LottiePalette._lineGradString2Data(str)
@@ -104,7 +104,7 @@ export default class LottiePalette {
     return `${pre}${stops.join(',')}${suf}`
   }
 
-  getInitialColors() {
+  getInitColors() {
     const colors = []
     for (let color in this.colorMap) {
       if (this.colorMap.hasOwnProperty(color)) {
@@ -114,7 +114,12 @@ export default class LottiePalette {
     return colors
   }
 
-  getLinearGradients(type = 'css') {
+  /**
+   * 获取所有线性渐变
+   * @param {String} [type='css'] 渐变数据类型：CSS格式/序列化格式
+   * @returns {Array} 渐变数据数组
+   */
+  getInitLinearGrads(type = 'CSS') {
     const lineGrads = []
     for (let lineGrad in this.linearGradMap) {
       if (!this.linearGradMap.hasOwnProperty(lineGrad)) {
@@ -122,7 +127,7 @@ export default class LottiePalette {
       }
 
       let lineGradStr
-      if (type === 'css') {
+      if (type.toUpperCase() === 'CSS') {
         lineGradStr = LottiePalette._lineGradString2CSS(lineGrad)
       } else {
         lineGradStr = lineGrad
@@ -138,6 +143,7 @@ export default class LottiePalette {
    * @param {String} key 颜色原始值（只接受rgb, hex格式）
    * @param {String} value 更新后的颜色
    * @param {Boolean} isUpdateGrad 是否更新渐变
+   * @param {Boolean} isWithoutCache 是否不通过映射表直接遍历更新
    */
   updateColor(key, value, isUpdateGrad) {
     let fKey = key.replace(/\s+/g, '')
@@ -192,6 +198,11 @@ export default class LottiePalette {
     }
   }
 
+  /**
+   * 更新线性渐变
+   * @param {String} key 线性渐变的序列化数据（键）
+   * @param {String} value 线性渐变的序列化数据（值）
+   */
   updateLinearGrad(key, value) {
     if (!(key in this.linearGradMap)) {
       throw `No such linear gradient key "${key}" in the origin svg file!`

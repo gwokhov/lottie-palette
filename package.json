@@ -1,6 +1,6 @@
 {
   "name": "lottie-palette",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "A runtime util can change the color of Lottie ani in single frame, support SVG renderer.",
   "main": "dist/lottie-palette.js",
   "author": "Gwokhov",

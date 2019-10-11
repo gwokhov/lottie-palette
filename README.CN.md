@@ -64,12 +64,12 @@ lp.updateColor('#000', 'rgb(255, 255, 255)', true)
 
 ## 方法
 
-| 方法                    | 说明                                | 参数                                                                                                   | 返回                      |
-|-------------------------|-------------------------------------|--------------------------------------------------------------------------------------------------------|---------------------------|
-| `[[Constructor]]`       | LottiePalette构造函数               | `$element:Element` 初始化的SVG动画元素                                                                 |                           |
-| `updateColor`           | 更新单个颜色                        | `key:String` 初始颜色（接受rgb，hex格式） `value:String` 替换颜色 `isUpdateGrad: Boolean` 是否更新渐变 |                           |
-| `updateLinearGrads`      | 更新线性渐变（建议使用updateColor） | `key:String` 初始渐变的lottie-palette-id `value:String` 替换渐变的lottie-palette-id                    |                           |
-| `updateLinearGradColor` | 更新渐变中的单个颜色                | `key:String` 初始颜色（接受rgb，hex格式） `value:String` 替换颜色                                      |                           |
-| `getInitialColors`       | 获取映射表中全部颜色                |                                                                                                        | :Array，元素以rgb形式展示 |
-| `getLinearGradients`    | 获取映射表中全部线性渐变            | `type:String` 返回数组中元素的类型（'css'|'id'），默认为'css'                                          | :Array                    |
-| `updateMaps`            | 更新颜色映射表                      |                                                                                                        |                           |
+| 方法                    | 说明                                 | 参数                                                                                                     | 返回                        |
+| ----------------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------- | --------------------------- |
+| `[[Constructor]]`       | LottiePalette 构造函数               | `$element:Element` 初始化的 SVG 动画元素                                                                 |                             |
+| `updateColor`           | 更新单个颜色                         | `key:String` 初始颜色（接受 rgb，hex 格式） `value:String` 替换颜色 `isUpdateGrad: Boolean` 是否更新渐变 |                             |
+| `updateLinearGrads`     | 更新线性渐变（建议使用 updateColor） | `key:String` 初始渐变的 lottie-palette-id `value:String` 替换渐变的 lottie-palette-id                    |                             |
+| `updateLinearGradColor` | 更新渐变中的单个颜色                 | `key:String` 初始颜色（接受 rgb，hex 格式） `value:String` 替换颜色                                      |                             |
+| `getInitColors`         | 获取映射表中全部颜色                 |                                                                                                          | :Array，元素以 rgb 形式展示 |
+| `getInitLinearGrads`    | 获取映射表中全部线性渐变             | `type:String` 返回数组中元素的类型（'css'                                                                | 'id'），默认为'css'         | :Array |
+| `updateMaps`            | 更新颜色映射表                       |                                                                                                          |                             |
