@@ -51,8 +51,8 @@ export default class LottiePalette {
       const stopList = $lineGrad.children
       const stopData = []
       // 遍历所有<stop>元素
-      for (let i = 0, len = stopList.length; i < len; i++) {
-        const $stop = stopList[i]
+      for (let j = 0, len = stopList.length; j < len; j++) {
+        const $stop = stopList[j]
 
         const offset = $stop.getAttribute('offset')
         const color = $stop.getAttribute('stop-color')
@@ -76,9 +76,7 @@ export default class LottiePalette {
    */
   static _lineGradString2Data(str) {
     const stopData = str.split('-')
-    return stopData.map(stop => {
-      return stop.split('|')
-    })
+    return stopData.map(stop => stop.split('|'))
   }
 
   /**
@@ -87,21 +85,15 @@ export default class LottiePalette {
    */
   static _lineGradString2CSS(str) {
     const stopArray = LottiePalette._lineGradString2Data(str)
-    const pre = 'linear-gradient('
-    const suf = ')'
     const stops = []
 
     stopArray.forEach(stop => {
       let color = ''
-      if (stop[2]) {
-        color = rgb2Rgba(stop[1], stop[2])
-      } else {
-        color = stop[1]
-      }
+      color = stop[2] ? rgb2Rgba(stop[1], stop[2]) : stop[1]
       color += ` ${stop[0]}`
       stops.push(color)
     })
-    return `${pre}${stops.join(',')}${suf}`
+    return `linear-gradient(${stops.join(',')})`
   }
 
   getInitColors() {
