@@ -1,22 +1,25 @@
 # LottiePalette
 
-[English](./README.md) | 中文
+[English](https://github.com/Gwokhov/lottie-palette/blob/master/README.md) | 中文文档
 
 [![npm](https://img.shields.io/npm/v/lottie-palette)](https://www.npmjs.com/package/lottie-palette)
 ![GitHub file size in bytes](https://img.shields.io/github/size/Gwokhov/lottie-palette/dist/lottie-palette.js)
 
 ## 介绍
 
-LottiePalette 是一个「**运行时**」捕获单帧修改 Lottie 动画颜色的工具，目前仅支持 **SVG** 的渲染方式。
+LottiePalette 是一个「**运行时**」捕获单帧修改 Lottie 动画颜色的工具，仅支持 **SVG** 的渲染方式。
 
-Demo：[LottiePaletteViewer](https://gwokhov.github.io/lottie-palette-viewer/dist/)
+Demo：[Lottie Palette Viewer](https://gwokhov.github.io/lottie-palette/demo/lottie-palette-viewer/)
 
 ## 安装
 
 ```shell
+# npm
 npm install lottie-palette
-# or
+# yarn
 yarn add lottie-palette
+# cdn
+https://cdn.jsdelivr.net/npm/lottie-palette@0.0.6/dist/lottie-palette.js
 ```
 
 或者直接引用到你的页面上：

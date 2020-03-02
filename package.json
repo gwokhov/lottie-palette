@@ -3,7 +3,7 @@
   "version": "0.0.6",
   "description": "A runtime util can change the color of Lottie ani in single frame, support SVG renderer.",
   "main": "dist/lottie-palette.js",
-  "author": "Gwokhov",
+  "author": "Gwokhov <gwokhou.dev@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.8.6",
@@ -16,5 +16,14 @@
   "scripts": {
     "build": "rollup -c"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Gwokhov/lottie-palette.git"
+  },
+  "keywords": [
+    "lottie",
+    "color"
+  ],
+  "homepage": "https://github.com/Gwokhov/lottie-palette"
 }

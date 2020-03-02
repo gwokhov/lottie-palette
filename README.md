@@ -1,22 +1,25 @@
 # LottiePalette
 
-English | [中文](./README.CN.md)
+English Doc | [中文](https://github.com/Gwokhov/lottie-palette/blob/master/README.CN.md)
 
 [![npm](https://img.shields.io/npm/v/lottie-palette)](https://www.npmjs.com/package/lottie-palette)
 ![GitHub file size in bytes](https://img.shields.io/github/size/Gwokhov/lottie-palette/dist/lottie-palette.js)
 
 ## Intro
 
-LottiePalette is a **runtime** util which can change the color of Lottie ani in single frame, for now it only support **SVG** renderer.
+LottiePalette is a **runtime** util which can change the color of Lottie ani in single frame, it only support **SVG** renderer.
 
-Demo：[LottiePaletteViewer](https://gwokhov.github.io/lottie-palette-viewer/dist/)
+Demo：[Lottie Palette Viewer](https://gwokhov.github.io/lottie-palette/demo/lottie-palette-viewer/)
 
 ## Install
 
 ```shell
+# npm
 npm install lottie-palette
-# or
+# yarn
 yarn add lottie-palette
+# cdn
+https://cdn.jsdelivr.net/npm/lottie-palette@0.0.6/dist/lottie-palette.js
 ```
 
 or just include the compiled file to your page:
