@@ -19,7 +19,7 @@ npm install lottie-palette
 # yarn
 yarn add lottie-palette
 # cdn
-https://cdn.jsdelivr.net/npm/lottie-palette@0.0.6/dist/lottie-palette.js
+<script src="https://cdn.jsdelivr.net/npm/lottie-palette@0.0.6/dist/lottie-palette.js"></script>
 ```
 
 or just include the compiled file to your page:

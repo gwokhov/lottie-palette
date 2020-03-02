@@ -19,7 +19,7 @@ npm install lottie-palette
 # yarn
 yarn add lottie-palette
 # cdn
-https://cdn.jsdelivr.net/npm/lottie-palette@0.0.6/dist/lottie-palette.js
+<script src="https://cdn.jsdelivr.net/npm/lottie-palette@0.0.6/dist/lottie-palette.js"></script>
 ```
 
 或者直接引用到你的页面上：

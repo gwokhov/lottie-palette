@@ -2,7 +2,6 @@ import {
   html,
   render
 } from 'https://cdn.jsdelivr.net/npm/lit-html@1.1.2/lit-html.min.js'
-import * as LottiePalette from '../../dist/lottie-palette.js'
 
 let lp = null
 const data = {
